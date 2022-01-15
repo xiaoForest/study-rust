@@ -1,0 +1,186 @@
+ 加密 - Rust 烹饪书 var path\_to\_root = "../";  try { var theme = localStorage.getItem('mdbook-theme'); var sidebar = localStorage.getItem('mdbook-sidebar'); if (theme.startsWith('"') && theme.endsWith('"')) { localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1)); } if (sidebar.startsWith('"') && sidebar.endsWith('"')) { localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1)); } } catch (e) { }  var theme; try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { } if (theme === null || theme === undefined) { theme = 'light'; } document.body.className = theme; document.querySelector('html').className = theme + ' js';  var html = document.querySelector('html'); var sidebar = 'hidden'; if (document.body.clientWidth \>= 1080) { try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch (e) { } sidebar = sidebar || 'visible'; } html.classList.remove('sidebar-visible'); html.classList.add("sidebar-" + sidebar);
+
+1. [**1.** 目录表](../intro.zh.html)
+2. [**2.** 关于](../about.zh.html)
+3. [**3.** 算法](../algorithms.zh.html)
+4. 1. [**3.1.** 生成随机值](../algorithms/randomness.zh.html)
+   2. [**3.2.** 排序向量](../algorithms/sorting.zh.html)
+
+5. [**4.** 命令行](../cli.zh.html)
+6. 1. [**4.1.** 参数解析](../cli/arguments.zh.html)
+   2. [**4.2.** ANSI 终端](../cli/ansi_terminal.zh.html)
+
+7. [**5.** 压缩](../compression.zh.html)
+8. 1. [**5.1.** 与 Tarballs 合作](../compression/tar.zh.html)
+
+9. [**6.** 并发性](../concurrency.zh.html)
+10. 1. [**6.1.** 显式线程](../concurrency/threads.zh.html)
+   2. [**6.2.** 数据并行性](../concurrency/parallel.zh.html)
+
+11. [**7.** 密码学](../cryptography.zh.html)
+12. 1. [**7.1.** 哈希](../cryptography/hashing.zh.html)
+   2. [**7.2.** 加密](../cryptography/encryption.zh.html)
+
+13. [**8.** 数据结构](../data_structures.zh.html)
+14. 1. [**8.1.** 位字段](../data_structures/bitfield.zh.html)
+
+15. [**9.** 数据库](../database.zh.html)
+16. 1. [**9.1.** SQLite](../database/sqlite.zh.html)
+   2. [**9.2.** Postgres](../database/postgres.zh.html)
+
+17. [**10.** 日期和时间](../datetime.zh.html)
+18. 1. [**10.1.** 持续时间和计算](../datetime/duration.zh.html)
+   2. [**10.2.** 解析与显示](../datetime/parse.zh.html)
+
+19. [**11.** 开发工具](../development_tools.zh.html)
+20. 1. [**11.1.** 调试](../development_tools/debugging.zh.html)
+   2. 1. [**11.1.1.** 日志消息](../development_tools/debugging/log.zh.html)
+      2. [**11.1.2.** 配置日志记录](../development_tools/debugging/config_log.zh.html)
+
+   3. [**11.2.** 版本控制](../development_tools/versioning.zh.html)
+   4. [**11.3.** 建立时间工具](../development_tools/build_tools.zh.html)
+
+21. [**12.** 编码](../encoding.zh.html)
+22. 1. [**12.1.** 字符集](../encoding/strings.zh.html)
+   2. [**12.2.** CSV 处理](../encoding/csv.zh.html)
+   3. [**12.3.** 结构化数据](../encoding/complex.zh.html)
+
+23. [**13.** 错误处理](../errors.zh.html)
+24. 1. [**13.1.** 处理错误变量](../errors/handle.zh.html)
+
+25. [**14.** 文件系统](../file.zh.html)
+26. 1. [**14.1.** 读写](../file/read-write.zh.html)
+   2. [**14.2.** 目录穿梭](../file/dir.zh.html)
+
+27. [**15.** 硬件支持](../hardware.zh.html)
+28. 1. [**15.1.** 处理器](../hardware/processor.zh.html)
+
+29. [**16.** 内存管理](../mem.zh.html)
+30. 1. [**16.1.** 全局静态](../mem/global_static.zh.html)
+
+31. [**17.** 网络](../net.zh.html)
+32. 1. [**17.1.** 服务器](../net/server.zh.html)
+
+33. [**18.** 操作系统](../os.zh.html)
+34. 1. [**18.1.** 外部命令](../os/external.zh.html)
+
+35. [**19.** 科学类](../science.zh.html)
+36. 1. [**19.1.** 数学](../science/mathematics.zh.html)
+   2. 1. [**19.1.1.** 线性代数](../science/mathematics/linear_algebra.zh.html)
+      2. [**19.1.2.** 三角法](../science/mathematics/trigonometry.zh.html)
+      3. [**19.1.3.** 复数](../science/mathematics/complex_numbers.zh.html)
+      4. [**19.1.4.** 统计](../science/mathematics/statistics.zh.html)
+      5. [**19.1.5.** 混杂](../science/mathematics/miscellaneous.zh.html)
+
+37. [**20.** 文本处理](../text.zh.html)
+38. 1. [**20.1.** 正则表达式](../text/regex.zh.html)
+   2. [**20.2.** 字符串解析](../text/string_parsing.zh.html)
+
+39. [**21.** 网页编程](../web.zh.html)
+40. 1. [**21.1.** 提取链接](../web/scraping.zh.html)
+   2. [**21.2.** 统一资源定位地址:URL](../web/url.zh.html)
+   3. [**21.3.** 媒体类型](../web/mime.zh.html)
+   4. [**21.4.** 客户端](../web/clients.zh.html)
+   5. 1. [**21.4.1.** 提出请求](../web/clients/requests.zh.html)
+      2. [**21.4.2.** 调用 Web API](../web/clients/apis.zh.html)
+      3. [**21.4.3.** 下载](../web/clients/download.zh.html)
+
+*Edit*
+
+* Light (default)
+* Rust
+* Coal
+* Navy
+* Ayu
+
+Rust 烹饪书
+==========
+
+[](../print.html)
+
+ document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible'); document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible'); Array.from(document.querySelectorAll('#sidebar a')).forEach(function (link) { link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1); });  document.getElementById("edit-button").addEventListener("click", function () { var editWindow = window.open("https://github.com/chinanf-boy/rust-cookbook-zh/edit/master/src/cryptography/encryption.zh.md"); });
+
+[
+
+加密
+==========
+
+](#加密)
+
+[]()
+
+[
+
+用 PBKDF2 对密码，进行 加盐 和 哈希 操作
+----------
+
+](#用-pbkdf2-对密码进行-加盐-和-哈希-操作)
+
+[![ring-badge](https://badge-cache.kominick.com/crates/v/ring.svg?label=ring)](https://briansmith.org/rustdoc/ring/) [![data-encoding-badge](https://badge-cache.kominick.com/crates/v/data-encoding.svg?label=data-encoding)](https://docs.rs/data-encoding/) [![cat-cryptography-badge](https://badge-cache.kominick.com/badge/cryptography--x.svg?style=social)](https://crates.io/categories/cryptography)
+
+[`ring::pbkdf2`](https://briansmith.org/rustdoc/ring/pbkdf2/index.html)的用法是，使用 PBKDF2 密钥派生函数[`pbkdf2::derive`](https://briansmith.org/rustdoc/ring/pbkdf2/fn.derive.html)，哈希 腌制的密码。 用[`pbkdf2::verify`](https://briansmith.org/rustdoc/ring/pbkdf2/fn.verify.html)验证哈希是否正确。 盐是用[`SecureRandom::fill`](https://briansmith.org/rustdoc/ring/rand/trait.SecureRandom.html#tymethod.fill)生成的，它用安全生成的随机数，填充 salt 字节数组。
+
+>
+>
+> 这个在哈希中加入字符串的方式称为“加盐”。其作用是让加盐后的哈希结果和没有加盐的结果不相同，在不同的应用情景中，这个处理可以增加额外的安全性。
+>
+>
+
+```
+extern crate ring;
+extern crate data_encoding;
+
+use data_encoding::HEXUPPER;
+use ring::error::Unspecified;
+use ring::rand::SecureRandom;
+use ring::{digest, pbkdf2, rand};
+
+fn main() -> Result<(), Unspecified> {
+    const CREDENTIAL_LEN: usize = digest::SHA512_OUTPUT_LEN;
+    const N_ITER: u32 = 100_000;
+    let rng = rand::SystemRandom::new();
+
+    let mut salt = [0u8; CREDENTIAL_LEN];
+    rng.fill(&mut salt)?;
+
+    let password = "Guess Me If You Can!";
+    let mut pbkdf2_hash = [0u8; CREDENTIAL_LEN];
+    pbkdf2::derive(
+        &digest::SHA512,
+        N_ITER,
+        &salt,
+        password.as_bytes(),
+        &mut pbkdf2_hash,
+    );
+    println!("Salt: {}", HEXUPPER.encode(&salt));
+    println!("PBKDF2 hash: {}", HEXUPPER.encode(&pbkdf2_hash));
+
+    let should_succeed = pbkdf2::verify(
+        &digest::SHA512,
+        N_ITER,
+        &salt,
+        password.as_bytes(),
+        &pbkdf2_hash,
+    );
+    let wrong_password = "Definitely not the correct password";
+    let should_fail = pbkdf2::verify(
+        &digest::SHA512,
+        N_ITER,
+        &salt,
+        wrong_password.as_bytes(),
+        &pbkdf2_hash,
+    );
+
+    assert!(should_succeed.is_ok());
+    assert!(!should_fail.is_ok());
+
+    Ok(())
+}
+
+```
+
+[](../cryptography/hashing.zh.html) [](../data_structures.zh.html)
+
+[](../cryptography/hashing.zh.html) [](../data_structures.zh.html)
+
+ var localAddrs = ["localhost", "127.0.0.1", ""]; if (localAddrs.indexOf(document.location.hostname) === -1) { window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'UA-128555056-1'); }
