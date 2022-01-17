@@ -128,28 +128,40 @@ fn main() {
     // println!("{}", n3);
 
     // Rust 位运算符范例 有点不是狠理解
-    let a: i32 = 2; // 二进制表示为 0 0 0 0 0 0 1 0
-    let b: i32 = 4; // 二进制表示为 0 0 0 0 0 0 1 1
+    // let a: i32 = 2; // 二进制表示为 0 0 0 0 0 0 1 0
+    // let b: i32 = 4; // 二进制表示为 0 0 0 0 0 0 1 1
 
-    let mut result: i32;
+    // let mut result: i32;
 
-    result = a & b;
-    println!("(a & b) => {} ", result);
+    // result = a & b;
+    // println!("(a & b) => {} ", result);
 
-    result = a | b;
-    println!("(a | b) => {} ", result);
+    // result = a | b;
+    // println!("(a | b) => {} ", result);
 
-    result = a ^ b;
-    println!("(a ^ b) => {} ", result);
+    // result = a ^ b;
+    // println!("(a ^ b) => {} ", result);
 
-    result = !b;
-    println!("(!b) => {} ", result);
+    // result = !b;
+    // println!("(!b) => {} ", result);
 
-    result = a << b;
-    println!("(a << b) => {}", result);
+    // result = a << b;
+    // println!("(a << b) => {}", result);
 
-    result = a >> b;
-    println!("(a >> b) => {}", result);
+    // result = a >> b;
+    // println!("(a >> b) => {}", result);
+    let state_code = "KA";
+    let state = match state_code {
+        "MH" => {
+            println!("Found match for MH");
+            "Maharashtra"
+        }
+        "KL" => "Kerala",
+        "KA" => "Karnadaka",
+        "GA" => "Goa",
+        _ => "Unknown",
+    };
+    println!("State name is {}", state);
 }
 // fn print_literal(data: &str) {
 //     println!("显示的字符串字面量是: {}", data);
