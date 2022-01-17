@@ -55,4 +55,102 @@ fn main() {
     // let name: usize = name.len();
     // //Error : `NAME` already defined
     // println!("改变 name 常量的类型: {}", name);
+
+    // 学习4  字符串
+
+    // let mut z = String::new();
+    // z.push_str("简单教程 简单编程");
+    // println!("{}", z);
+
+    // let name1 = "你好，简单教程
+    // 简单编程3
+    // 简单编程2
+    // 简单编程1".to_string();
+    // println!("{}",name1);
+
+    // let name1 = "简单教程 简单编
+    // 程3
+    // 程2
+    // 程1".to_string(); //原字符串对象
+    // let name2 = name1.replace("1","滚");    // 查找并替换
+    // println!("{}",name2);
+
+    // let mut company = "简单教程".to_string();
+    // company.push_str("t简单编程2");
+    // println!("{}",company);
+
+    // let example_string = String::from("简单教程1");
+    // print_literal(example_string.as_str());
+    //     let msg = "简单教程 简 单编程 www.twle.cn
+    //    https://www.twle.cn"
+    //         .to_string();
+    //     let mut i = 1;
+
+    //     for token in msg.split_whitespace() {
+    //         println!("token {} {}", i, token);
+    //         i += 1;
+    //     }
+
+    // let fullname = "李白，诗仙，唐朝";
+
+    // for token in fullname.split("，") {
+    //     println!("token is {}", token);
+    // }
+
+    // // 存储在一个向量中
+    // println!("\n");
+    // let tokens: Vec<&str> = fullname.split("，").collect();
+    // println!("姓名 is {}", tokens[0]);
+    // println!("称号 {}", tokens[1]);
+    // println!("朝代 {}", tokens[2]);
+    // let n1 = "简单教程 www.twle.cn".to_string();
+
+    // for n in n1.chars() {
+    //     println!("{}", n);
+    // }
+
+    // let n1 = "哈哈哈".to_string();
+    // let n2 = "简单编程2".to_string();
+
+    // let n3 = n1 + &n2; // 需要传递 n2 的引用
+    // println!("{}",n3);
+
+    // let number = 2020;
+    // let number_as_string = number.to_string();
+
+    // // 转换数字为字符串类型
+    // println!("{}", number_as_string);
+    // println!("{}", number_as_string != "2020");
+
+    // let n1 =32;
+    // let n2 = "简单编程".to_string();
+    // let n3 = format!("{} {}",n1,n2);
+    // println!("{}", n3);
+
+    // Rust 位运算符范例 有点不是狠理解
+    let a: i32 = 2; // 二进制表示为 0 0 0 0 0 0 1 0
+    let b: i32 = 4; // 二进制表示为 0 0 0 0 0 0 1 1
+
+    let mut result: i32;
+
+    result = a & b;
+    println!("(a & b) => {} ", result);
+
+    result = a | b;
+    println!("(a | b) => {} ", result);
+
+    result = a ^ b;
+    println!("(a ^ b) => {} ", result);
+
+    result = !b;
+    println!("(!b) => {} ", result);
+
+    result = a << b;
+    println!("(a << b) => {}", result);
+
+    result = a >> b;
+    println!("(a >> b) => {}", result);
 }
+// fn print_literal(data: &str) {
+//     println!("显示的字符串字面量是: {}", data);
+// }
