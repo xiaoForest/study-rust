@@ -150,18 +150,38 @@ fn main() {
 
     // result = a >> b;
     // println!("(a >> b) => {}", result);
-    let state_code = "KA";
-    let state = match state_code {
-        "MH" => {
-            println!("Found match for MH");
-            "Maharashtra"
+    // let state_code = "KA";
+    // let state = match state_code {
+    //     "MH" => {
+    //         println!("Found match for MH");
+    //         "Maharashtra"
+    //     }
+    //     "KL" => "Kerala",
+    //     "KA" => "Karnadaka",
+    //     "GA" => "Goa",
+    //     _ => "Unknown",
+    // };
+    // println!("State name is {}", state);
+
+    // let mut x = 1;
+    // while x <= 6 {
+    //     println!("inside loop x value is {}", x);
+    //     x += 1;
+    // }
+    // println!("outside loop x value is {}", x);
+
+    // let mut x = 0;
+    // loop {
+    //    x+=1;
+    //    println!("x={}",x);
+    // }
+
+    for x in 4..21 {
+        if 5 == x {
+            continue;
         }
-        "KL" => "Kerala",
-        "KA" => "Karnadaka",
-        "GA" => "Goa",
-        _ => "Unknown",
-    };
-    println!("State name is {}", state);
+        println!("x is {}", x);
+    }
 }
 // fn print_literal(data: &str) {
 //     println!("显示的字符串字面量是: {}", data);
