@@ -176,13 +176,64 @@ fn main() {
     //    println!("x={}",x);
     // }
 
-    for x in 4..21 {
-        if 5 == x {
-            continue;
-        }
-        println!("x is {}", x);
-    }
+    // for x in 4..21 {
+    //     if 5 == x {
+    //         continue;
+    //     }
+    //     println!("x is {}", x);
+    // }
+
+    // fn get_pi()->f64 {
+    //     22.0/7.0
+    //  }
+    // let b: (i32, bool, f64) = (30, true, 7.9);
+    // print(b);
+    // let mut arr= [23,3,4,5,6,7,8,9,10,11,12];
+    // arr[2] = 666;
+    // println!("{:?}",arr);
+    // for index in 0..11 {
+    //     println!("index is: {} & value is : {}",index,arr[index]);
+    //  }
+    // let mut arr = [10, 20, 30];
+    // update(&mut arr);
+    // println!("Inside main {:?}", arr);
+
+    // let v = vec![1, 2, 3];
+
+    // // 赋值会导致两个变量都对同一个数据拥有所有权
+    // // 因为两个变量指向了相同的内存块
+    // let v2 = v;
+
+    // // Rust 会检查两个变量是否同时拥有堆上内存块的所有权。
+    // // 如果发生所有权竞争，它会自动将所有权判给给新的变量
+    // // 运行出错，因为 v 不再拥有数据的所有权
+    // println!("{:?}", v2);
+    let v = vec![1, 2, 3]; // 向量 v 拥有堆上数据的所有权
+    let v2 = v; // 向量 v 将所有权转让给 v2
+    let v2_return = display(v2);
+    println!("In main {:?}", v2_return);
 }
+// fn update(arr: &mut [i32; 3]) {
+//     for i in 0..3 {
+//         arr[i] = 0;
+//     }
+//     println!("Inside update {:?}", arr);
+// }
+// fn print(x: (i32, bool, f64)) {
+//     let (age, is_male, cgpa) = x;
+//     println!(
+//         "Age is {} , isMale? {},cgpa is
+//     {}",
+//         age, is_male, cgpa
+//     );
+// }
 // fn print_literal(data: &str) {
 //     println!("显示的字符串字面量是: {}", data);
+// }
+// 函数返回值语法格式
+// Rust 语言的返回值定义语法与其它语言有所不同，它是通过在 小括号后面使用 箭头 ( -> ) 加上数据类型 来定义的。
+// fn display(v: Vec<i32>) -> Vec<i32> {
+//     // 返回同一个向量
+//     println!("inside display {:?}", v);
+//     return v;
 // }
