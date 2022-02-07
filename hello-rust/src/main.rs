@@ -1,7 +1,7 @@
 // 学习1
 // use std::fs;
 
-fn main() {
+// fn main() {
     // 学习1
     // let mut line = String::new();
     // println!("请粘贴你的目标网址:");
@@ -208,11 +208,18 @@ fn main() {
     // // 如果发生所有权竞争，它会自动将所有权判给给新的变量
     // // 运行出错，因为 v 不再拥有数据的所有权
     // println!("{:?}", v2);
-    let v = vec![1, 2, 3]; // 向量 v 拥有堆上数据的所有权
-    let v2 = v; // 向量 v 将所有权转让给 v2
-    let v2_return = display(v2);
-    println!("In main {:?}", v2_return);
-}
+    // let v = vec![1, 2, 3]; // 向量 v 拥有堆上数据的所有权
+    // let v2 = v; // 向量 v 将所有权转让给 v2
+    // let v2_return = display(v2);
+    // println!("In main {:?}", v2_return);
+    // let mut name:String = String::from("TutorialsPoint");
+    // display(&mut name);  // 传递一个可变引用
+    // println!("The value of name after modification is:{}",name);
+// }
+// fn display(param_name:&mut String){
+//     println!("param_name value is :{}",param_name);
+//     param_name.push_str(" Rocks"); // 修改字符串，追加一些字符
+//  }
 // fn update(arr: &mut [i32; 3]) {
 //     for i in 0..3 {
 //         arr[i] = 0;
@@ -237,3 +244,31 @@ fn main() {
 //     println!("inside display {:?}", v);
 //     return v;
 // }
+//定义一个结构体
+struct Employee {
+    name:String,
+    company:String,
+    age:u32
+ }
+ fn main() {
+    //初始化结构体
+    let emp1 = Employee {
+       company:String::from("TutorialsPoint"),
+       name:String::from("Mohtashim"),
+       age:50
+    };
+    let emp2 = Employee{
+       company:String::from("TutorialsPoint"),
+       name:String::from("Kannan"),
+       age:32
+    };
+    //将结构体作为参数传递给 display
+    display(emp1);
+    display(emp2);
+ }
+ 
+ // 使用点号(.) 访问符访问结构体的元素并输出它么的值
+ fn display( emp:Employee){
+    println!("Name is :{} company is {} age is 
+    {}",emp.name,emp.company,emp.age);
+ }
